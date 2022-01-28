@@ -1,8 +1,6 @@
 let courseDetails = document.querySelectorAll('.course .courseDetails');
 courseDetails = [...courseDetails]
 
-console.log(courseDetails)
-
 let actives = []
 
 function toggle(e) {

@@ -31,23 +31,23 @@ aside{
 
 .course{
     width: 100%;
-    /* background-color: green; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 0;
+    margin: 0 0 5px 0;
     padding-bottom: 5px;
 }
 
-.courseDetails{
+div.courseDetails{
     display: flex;
     flex-direction: row;
     color: white;
     background-color: rgb(3, 65, 136);
 }
 
-.courseDetails:hover{
+
+div.courseDetails:hover{
     background-color: rgb(0, 95, 204);
     cursor: pointer;
 }
@@ -63,18 +63,21 @@ aside{
     border-radius: 50px;
 }
 
+
 .assignmentDetails{
     width: 100%;
     box-sizing: border-box;
     margin-top: -10px;
     padding-left: 20px;
-    overflow: hidden;
-    display: none;
+    display: inline-block;
     height: 0;
-    animation-duration: .5s;
-    /* background-color: grey; */
 }
 
+
+div.courseDetails.active ~ .assignmentDetails{
+    display: block;
+    height: 100%;
+}
 
 .assignmentDetails div{
     width: 100%;
@@ -88,23 +91,6 @@ aside{
     padding: 0  10px 10px;
     margin: 0 0 10px 0;
     border-bottom:none;
-}
-
-
-/* 
-
-.assignmentDetails div{
-    box-sizing: border-box;
-    padding: 10px 0;
-} */
-
-/* .assignmentDetails div:nth-child(even){
-    background-color: rgb(230, 230, 230);
-} */
-
-div.courseDetails.active ~ .assignmentDetails{
-    display: block;
-    height: 100%;
 }
 
 .question{
