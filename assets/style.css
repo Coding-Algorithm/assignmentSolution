@@ -231,6 +231,10 @@ li{
     li{
         list-style-type: none;
     }
+
+    a{
+        word-wrap:break-word;
+    }
     
 }
 
