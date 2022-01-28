@@ -24,17 +24,17 @@ function toggle(e) {
             console.log('insidde if')
             moreLess1 = actives[0].children[0]
             actives[0].classList.toggle('active')
-            actives[0].style.backgroundColor = "white"
+            actives[0].style.backgroundColor = "rgb(3, 65, 136)"
             moreLess1.innerHTML = '+'
             console.log(actives[0])
             actives.pop()            
         }
         course.classList.toggle('active')
-        course.style.backgroundColor = "grey"
+        course.style.backgroundColor = "rgb(0, 95, 204)"
         actives.push(course)
     }else{
         moreLess.innerHTML = '+'
-        actives[0].style.backgroundColor = "white"
+        actives[0].style.backgroundColor = "rgb(3, 65, 136)"
         console.log(course)
         course.classList.toggle('active')
         actives.pop()            

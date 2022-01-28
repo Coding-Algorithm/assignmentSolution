@@ -36,20 +36,19 @@ aside{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin:0;
+    margin: 0;
     padding-bottom: 5px;
-    border-bottom: 1px solid grey;
 }
 
 .courseDetails{
     display: flex;
     flex-direction: row;
-    background-color: white;
-    border-bottom: 1px solid grey;
+    color: white;
+    background-color: rgb(3, 65, 136);
 }
 
 .courseDetails:hover{
-    background-color: grey;
+    background-color: rgb(0, 95, 204);
     cursor: pointer;
 }
 
@@ -60,7 +59,7 @@ aside{
     font-weight: bold;
     padding: 5px 10px 5px 10px;
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 50px;
 }
 
@@ -69,21 +68,41 @@ aside{
     box-sizing: border-box;
     margin-top: -10px;
     margin-left: 50px;
+    overflow: hidden;
+    display: none;
     height: 0;
     animation-duration: .5s;
     /* background-color: grey; */
 }
 
+
+.assignmentDetails div{
+    box-sizing: border-box;
+    padding: 0  10px 10px;
+    margin: 0 0 10px 0;
+    border-bottom: .5px dashed grey;
+} 
+.assignmentDetails div:last-child{
+    box-sizing: border-box;
+    padding: 0  10px 10px;
+    margin: 0 0 10px 0;
+    border-bottom:none;
+}
+
+
+/* 
+
 .assignmentDetails div{
     box-sizing: border-box;
     padding: 10px 0;
-}
+} */
 
 .assignmentDetails div:nth-child(even){
     background-color: rgb(250, 250, 250);
 }
 
 div.courseDetails.active ~ .assignmentDetails{
+    display: block;
     height: 100%;
 }
 
@@ -105,8 +124,8 @@ div.courseDetails.active ~ .assignmentDetails{
 .solutionReference p{
     font-size: 20px;
     font-weight: bold;
-    margin-right: 10px;
-    padding:0 10px;
+    /* margin-right: 10px; */
+    padding:0 0px;
     color: rgb(7, 122, 16);
 }
 
@@ -117,6 +136,8 @@ div.courseDetails.active ~ .assignmentDetails{
 
 li{
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -154,18 +175,15 @@ li{
         overflow: hidden;
         margin:0;
         padding-bottom: 5px;
-        border-bottom: 1px solid grey;
     }
     
     .courseDetails{
         display: flex;
         flex-direction: row;
-        background-color: white;
-        border-bottom: 1px solid grey;
     }
     
     .courseDetails:hover{
-        background-color: grey;
+        background-color: rgb(0, 95, 204);
         cursor: pointer;
     }
     
@@ -176,11 +194,11 @@ li{
         font-weight: bold;
         padding: 5px 10px 5px 10px;
         margin: 10px;
-        border: 2px solid black;
         border-radius: 50px;
     }
     
     .assignmentDetails{
+        margin: 0;
         padding-right: 40px;
         height: 0;
         animation-duration: .5s;
@@ -189,37 +207,43 @@ li{
     
     .assignmentDetails div{
         box-sizing: border-box;
-        padding: 10px;
+        padding: 0  10px 10px;
+        margin: 0 0 10px 0;
+        border-bottom: .5px dashed grey;
+    } 
+    .assignmentDetails div:last-child{
+        box-sizing: border-box;
+        padding: 0  10px 10px;
+        margin: 0 0 10px 0;
+        border-bottom:none;
     }
     
     .assignmentDetails div:nth-child(even){
         background-color: rgb(250, 250, 250);
     }
     
-    div.courseDetails.active ~ .assignmentDetails{
-        height: 100%;
-    }
-    
     .question{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        margin-bottom: -15px;
+        align-items: flex-start;
+        margin-bottom: 30px;
     }
     
     .question p{
         font-size: 20px;
         font-weight: bold;
         margin-right: 10px;
+        margin-bottom: 10px;
         color: rgb(173, 34, 9);
     }
-    
+
     .solutionReference p{
         font-size: 20px;
         font-weight: bold;
-        margin-right: 10px;
-        padding:0 10px;
+        margin-top: 20px;
+        margin-right: 0px;
+        padding:0;
         color: rgb(7, 122, 16);
     }
     
@@ -230,6 +254,8 @@ li{
     
     li{
         list-style-type: none;
+        margin: -10px;
+        padding: 0;
     }
 
     a{
